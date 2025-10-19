@@ -2,6 +2,7 @@ package calculator;
 
 import camp.nextstep.edu.missionutils.Console;
 
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +21,7 @@ public class Application {
         } else {
             splittedNumbers = splitWithDefaultDelimiter(input);
         }
+
     }
 
     public static boolean validateIsEmpty(String input) {
@@ -78,4 +80,16 @@ public class Application {
         return input.split(defaultDelimiter);
     }
 
+    public static int getSum(String[] strings) {
+        int sum = 0;
+        for (String s : strings) {
+            if (s.isEmpty()) continue;
+            try {
+                sum += Integer.parseInt(s);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("올바른 값을 입력해주세요");
+            }
+        }
+        return sum;
+    }
 }
