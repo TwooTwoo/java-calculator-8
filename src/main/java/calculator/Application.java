@@ -17,6 +17,8 @@ public class Application {
         String[] splittedNumbers = null;
         if (isCustomDelimiterUsed(input)) {
             splittedNumbers = splitWithCustomDelimiter(input);
+        } else {
+            splittedNumbers = splitWithDefaultDelimiter(input);
         }
     }
 
@@ -68,6 +70,12 @@ public class Application {
             return matcher.group(2);
         }
         throw new IllegalArgumentException("숫자 부분을 찾을 수 없습니다");
+    }
+
+    public static String[] splitWithDefaultDelimiter(String input) {
+        String defaultDelimiter = "[,|:]";
+
+        return input.split(defaultDelimiter);
     }
 
 }
