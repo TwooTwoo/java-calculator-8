@@ -22,6 +22,7 @@ public class Application {
             splittedNumbers = splitWithDefaultDelimiter(input);
         }
 
+        System.out.println("결과: " + getSum(splittedNumbers));
     }
 
     public static boolean validateIsEmpty(String input) {
