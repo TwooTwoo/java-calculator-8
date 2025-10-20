@@ -9,15 +9,13 @@ public class StringCalculator {
     }
 
     public int calculate(String input) {
+        if (isEmpty(input)) {
+            return 0;
+        }
+
         String[] splittedNumbers = StringSplitter.split(input);
 
         return getSum(splittedNumbers);
-    }
-
-    public static String[] splitWithDefaultDelimiter(String input) {
-        String defaultDelimiter = "[,|:]";
-
-        return input.split(defaultDelimiter);
     }
 
     public static int getSum(String[] strings) {
@@ -30,6 +28,7 @@ public class StringCalculator {
                 throw new IllegalArgumentException("올바른 값을 입력해주세요");
             }
         }
+
         return sum;
     }
 }

@@ -11,11 +11,6 @@ public class CalculatorController {
         view.printMessage("덧셈할 문자열을 입력해 주세요.");
         String input = view.getInput();
 
-        if (calculator.isEmpty(input)) {
-            view.printResult(0);
-            return;
-        }
-
         int result = calculator.calculate(input);
         view.printResult(result);
     }
