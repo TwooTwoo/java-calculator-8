@@ -1,4 +1,4 @@
-package calculator.service;
+package calculator.model;
 
 import calculator.util.StringSplitter;
 

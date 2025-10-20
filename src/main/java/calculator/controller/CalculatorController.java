@@ -1,7 +1,7 @@
 package calculator.controller;
 
 import calculator.view.CalculatorView;
-import calculator.service.StringCalculator;
+import calculator.model.StringCalculator;
 
 public class CalculatorController {
     private final CalculatorView view = new CalculatorView();
