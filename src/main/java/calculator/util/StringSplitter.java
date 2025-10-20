@@ -18,6 +18,7 @@ public class StringSplitter {
             }
             throw new IllegalArgumentException("입력 형식이 잘못되었습니다.");
         }
+
         return input.split(DEFAULT_DELIMITER);
     }
 
