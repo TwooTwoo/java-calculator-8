@@ -37,7 +37,7 @@ public class StringCalculator {
 
         for (String s : numbers) {
             if (s == null || s.trim().isEmpty()) {
-                throw new IllegalArgumentException("빈 숫자 항목이 포함되어 있습니다.");
+                throw new IllegalArgumentException("빈칸이 포함되어 있습니다.");
             }
         }
     }
